@@ -1,1 +1,25 @@
-ewogICJvdXRib3VuZHMiOiBbCiAgICB7CiAgICAgICJ0eXBlIjogInZsZXNzIiwKICAgICAgInRhZyI6ICJwcm94eSIsCiAgICAgICJzZXJ2ZXIiOiAiMTk4LjE0NC4xODIuMjIiLAogICAgICAic2VydmVyX3BvcnQiOiA4NDQzLAogICAgICAidXVpZCI6ICI3ZmI1M2RmZC00ODAyLTQ4MzAtOTcxZi0wMGM0NjAwNzAwNGIiLAogICAgICAiZmxvdyI6ICIiLAogICAgICAidGxzIjogewogICAgICAgICJlbmFibGVkIjogdHJ1ZSwKICAgICAgICAic2VydmVyX25hbWUiOiAiZ29vZ2xlLmNvbSIsCiAgICAgICAgInV0bHMiOiB7CiAgICAgICAgICAiZW5hYmxlZCI6IHRydWUsCiAgICAgICAgICAiZmluZ2VycHJpbnQiOiAiY2hyb21lIgogICAgICAgIH0sCiAgICAgICAgInJlYWxpdHkiOiB7CiAgICAgICAgICAiZW5hYmxlZCI6IHRydWUsCiAgICAgICAgICAicHVibGljX2tleSI6ICIwMGJhUEVxTEJHT3hQZmhOejRxRlNaakhKS3hsR1luLUhGMTBPeHVKNEZZIiwKICAgICAgICAgICJzaG9ydF9pZCI6ICIyMiIKICAgICAgICB9CiAgICAgIH0KICAgIH0KICBdCn0K
+{
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "198.144.182.22",
+      "server_port": 8443,
+      "uuid": "7fb53dfd-4802-4830-971f-00c46007004b",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "00baPEqLBGOxPfhNz4qFSZjHJKxlGYn-HF10OxuJ4FY",
+          "short_id": "22"
+        }
+      }
+    }
+  ]
+}
