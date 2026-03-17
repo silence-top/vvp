@@ -1,0 +1,81 @@
+# ---------------------------------------------------
+# 架构师提醒：此文件仅包含节点信息，作为 Proxy Provider 使用
+# ---------------------------------------------------
+proxies:
+  # 1. VLESS TCP (无加密)
+  - name: "9ri4wwvj"
+    type: vless
+    server: 74.48.158.18
+    port: 33271
+    uuid: dfe5742f-1819-4f46-858b-162a5fddb34d
+    udp: true
+    tls: false
+
+  # 2. VMess WS TLS (gcore-加tls)
+  - name: "gcore-加tls"
+    type: vmess
+    server: speedtest.gcore.com
+    port: 443
+    uuid: d9c6c3e1-29c8-4390-9f9c-3273866c4b7c
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: speedtest.gcore.com
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: svip.448732738.xyz
+
+  # 3. VMess WS (gcore-不加tls)
+  - name: "gcore-不加tls"
+    type: vmess
+    server: speedtest.gcore.com
+    port: 80
+    uuid: d9c6c3e1-29c8-4390-9f9c-3273866c4b7c
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: svip.448732738.xyz
+
+  # 4. VLESS WS TLS (cloudflare)
+  - name: "cloudfare-d0czqye9"
+    type: vless
+    server: 74.48.158.18
+    port: 2096
+    uuid: f0276870-59dc-4fe5-8fc8-867ed7232de3
+    tls: true
+    servername: public.448732738.xyz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: public.448732738.xyz
+
+  # 5. Hysteria2 (Misaka)
+  - name: "Misaka-Hysteria2"
+    type: hysteria2
+    server: 74.48.158.18
+    port: 49500
+    password: "Ww821241."
+    sni: www.bing.com
+    skip-cert-verify: true
+
+  # 6. VLESS REALITY (TCP)
+  - name: "reality-h1hdespi"
+    type: vless
+    server: 74.48.158.18
+    port: 8443
+    uuid: 2b4f8331-ca71-42ca-861f-b9dc3a44c5f6
+    tls: true
+    servername: google.com
+    network: tcp
+    udp: true
+    reality-opts:
+      public-key: 5FjbI0Hhn7Op0wGPujE4twWUwGosMxqWJu5Wk7bFNgo
+      short-id: a442
+    client-fingerprint: chrome
