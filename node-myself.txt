@@ -1,0 +1,74 @@
+# ---------------------------------------------------
+# 第二套节点订阅文件 (provider2.yaml)
+# ---------------------------------------------------
+proxies:
+  # 1. Hysteria2 (HY2MYSELF)
+  - name: "HY2MYSELF"
+    type: hysteria2
+    server: 192.210.193.22
+    port: 49500
+    password: "Ww821241."
+    sni: www.bing.com
+    skip-cert-verify: true
+    mport: 48000-58000
+
+  # 2. VLESS REALITY (reality-v9lnhom5)
+  - name: "reality-v9lnhom5"
+    type: vless
+    server: 192.210.193.22
+    port: 8443
+    uuid: 6a5c246e-2c66-4a2e-9eb1-7863ad6cf639
+    tls: true
+    servername: www.speedtest.org
+    network: tcp
+    udp: true
+    reality-opts:
+      public-key: hx7XKRKLhCd6ySJRhopIkYFoobqJE28YDJtWnMcXKh4
+      short-id: 1f
+    client-fingerprint: chrome
+
+  # 3. VLESS WS TLS (cloudfare-6ceqkzdv)
+  - name: "cloudfare-6ceqkzdv"
+    type: vless
+    server: 192.210.193.22
+    port: 2096
+    uuid: f57d322d-a875-4897-8242-62ac6e4d78c5
+    tls: true
+    servername: myself.448732738.xyz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: myself.448732738.xyz
+
+  # 4. VMess WS TLS (gcore-加tls)
+  - name: "gcore-加tls-2"
+    type: vmess
+    server: svip.448732738.xyz
+    port: 443
+    uuid: 26b11bf6-52f8-406b-9ca7-05542604535b
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: speedtest.gcore.com
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: svip.448732738.xyz
+
+  # 5. VMess WS (gcore-不加tls)
+  - name: "gcore-不加tls-2"
+    type: vmess
+    server: svip.448732738.xyz
+    port: 80
+    uuid: 26b11bf6-52f8-406b-9ca7-05542604535b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: "/"
+      headers:
+        Host: svip.448732738.xyz
